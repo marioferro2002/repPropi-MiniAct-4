@@ -13,11 +13,17 @@ class BroadcastReciever : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val action = intent.action
         when (action) {
-            "PLAY_SOUND" -> {
-                playSound(context)
+            "PLAY_FLOR" -> {
+                playSong(context, "flor")
             }
-            "PLAY_SONG" -> {
-                playSong(context)
+            "PLAY_SEGADORS" -> {
+                playSong(context, "segadors")
+            }
+            "PLAY_LOVE" -> {
+                playSong(context, "love")
+            }
+            "PLAY_BALLIN" -> {
+                playSong(context, "ballin")
             }
             "STOP_PLAYBACK" -> {
                 stopPlayback(context)
@@ -25,20 +31,11 @@ class BroadcastReciever : BroadcastReceiver() {
         }
     }
     
-    private fun playSound(context: Context) {
-        serviceIntent = Intent(context, ElServicio::class.java)
-        serviceIntent!!.putExtra("sound_type", "sound")
-        context.startService(serviceIntent!!)
-        Toast.makeText(
-            context,
-            "BroadcastReceiver - Inicio reproducción sonido",
-            Toast.LENGTH_LONG
-        ).show()
-    }
+
     
-    private fun playSong(context: Context) {
+    private fun playSong(context: Context, song: String) {
         serviceIntent = Intent(context, ElServicio::class.java)
-        serviceIntent!!.putExtra("sound_type", "song")
+        serviceIntent!!.putExtra("sound_type", song)
         context.startService(serviceIntent!!)
         Toast.makeText(
             context,

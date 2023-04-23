@@ -24,8 +24,10 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
     
     private val filter = IntentFilter()
     init {
-        filter.addAction("PLAY_SOUND")
-        filter.addAction("PLAY_SONG")
+        filter.addAction("PLAY_FLOR")
+        filter.addAction("PLAY_SEGADORS")
+        filter.addAction("PLAY_LOVE")
+        filter.addAction("PLAY_BALLIN")
         filter.addAction("STOP_PLAYBACK")
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,10 +40,12 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rpSn.setOnClickListener(this)
-        binding.rpCn.setOnClickListener(this)
+
         binding.btnFin.setOnClickListener(this)
-        binding.btnChoose.setOnClickListener(this)
+        binding.btnFlor.setOnClickListener(this)
+        binding.btnSegadors.setOnClickListener(this)
+        binding.btnLove.setOnClickListener(this)
+        binding.btnBallin.setOnClickListener(this)
     
         readCSongsReqPermLaunc = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
             uri?.let {
@@ -59,22 +63,27 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
     override fun onClick(src: View) {
 
         when(src.id) {
-            binding.rpSn.id -> {
-                Toast.makeText(this, R.string.selSound, Toast.LENGTH_SHORT).show()
-                val intent = Intent("PLAY_SOUND")
+            binding.btnFlor.id -> {
+                val intent = Intent("PLAY_FLOR")
                 sendBroadcast(intent)
             }
-            binding.rpCn.id -> {
-                val intent = Intent("PLAY_SONG")
+            binding.btnSegadors.id -> {
+                val intent = Intent("PLAY_SEGADORS")
+                sendBroadcast(intent)
+            }
+            binding.btnLove.id -> {
+                val intent = Intent("PLAY_LOVE")
+                sendBroadcast(intent)
+            }
+            binding.btnBallin.id -> {
+                val intent = Intent("PLAY_BALLIN")
                 sendBroadcast(intent)
             }
             binding.btnFin.id -> {
                 val intent = Intent("STOP_PLAYBACK")
                 sendBroadcast(intent)
             }
-            binding.btnChoose.id -> {
-                readCSongsReqPermLaunc.launch("audio/*")
-            }
+
         }
     }
 }

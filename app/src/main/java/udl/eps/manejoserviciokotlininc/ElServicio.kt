@@ -26,8 +26,21 @@ class ElServicio : Service() {
         val tipo = extras?.getString("sound_type")
 
         when (tipo) {
-            "sound" -> playSound()
-            "song" -> playSong()
+            "flor" -> {
+                soundPlayer = MediaPlayer.create(this, R.raw.flor)
+                soundPlayer?.start()
+            }
+            "segadors" -> {
+                soundPlayer = MediaPlayer.create(this, R.raw.segadors)
+                soundPlayer?.start()
+            }
+            "love" -> {
+                soundPlayer = MediaPlayer.create(this, R.raw.love)
+                soundPlayer?.start()
+            }
+            "ballin" -> {
+                playSong()
+            }
         }
         return startId
     }
@@ -41,11 +54,7 @@ class ElServicio : Service() {
         Toast.makeText(this, R.string.finaserv, Toast.LENGTH_LONG).show()
     }
     
-    private fun playSound() {
-        if (soundPlayer == null) soundPlayer = MediaPlayer.create(this, R.raw.train)
-        Toast.makeText(this, R.string.selSound, Toast.LENGTH_SHORT).show()
-        soundPlayer?.start()
-    }
+
     private fun playSong() {
         if (songUri != null) getSongFromUri()
         else if (songPlayer == null) songPlayer = MediaPlayer.create(this, R.raw.ballin)

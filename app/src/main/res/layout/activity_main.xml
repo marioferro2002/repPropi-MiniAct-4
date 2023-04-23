@@ -20,10 +20,8 @@
         android:gravity="center"
         tools:ignore="MissingConstraints">
 
-
-
         <Button
-            android:id="@+id/rpCn"
+            android:id="@+id/btnLove"
             style="@style/MaterialAlertDialog.Material3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,7 +29,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnChoose"
+        android:id="@+id/btnBallin"
         style="@style/MaterialAlertDialog.Material3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,12 +39,31 @@
     </Button>
 
     <Button
-        android:id="@+id/btnFin"
+        android:id="@+id/btnFlor"
         style="@style/MaterialAlertDialog.Material3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/florb">
+
+    </Button>
+    <Button
+        android:id="@+id/btnSegadors"
+        style="@style/MaterialAlertDialog.Material3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/segadorsb">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnFin"
+        style="@style/MaterialAlertDialog.Material3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/butonFin">
 
     </Button>
 
