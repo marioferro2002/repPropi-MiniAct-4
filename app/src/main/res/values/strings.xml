@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ManejoServicioKotlin</string>
+    <string name="creaserv">Servicio creado</string>
+    <string name="finaserv">Servicio finalizado</string>
+    <string name="iniserv">Servicio iniciado</string>
+    <string name="tituloAct">Reproductor Propio</string>
+    <string name="selSound">Seleccionado Sonido</string>
+    <string name="selSong">Seleccionada Canción</string>
+    <string name="botoChooseSound">Obtener canción Reproductor Sistema</string>
+    <string name="textChoosSong">Canción elegida:</string>
+    <string name="textChoosSound">Sonido elegido:</string>
+    <string name="loveb">WHAT IS LOVE</string>
+    <string name="florb">UN BESO Y UNA FLOR</string>
+    <string name="segadorsb">SEGADORS-REMIX</string>
+    <string name="ballinb">BALLIN</string>
+
+</resources>
