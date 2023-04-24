@@ -18,18 +18,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SongSelectionActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.example.action.SELECT_SONG" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
         <service android:enabled="true" android:name="udl.eps.reproductormusicapropio.ElServicio"
             android:exported="false" />
         <receiver
             android:name="udl.eps.reproductormusicapropio.BroadcastReciever"
             android:exported="true">
-            <intent-filter>
-                    <action android:name="udl.eps.reproductormusicapropio.PLAY_SOUND" />
-                    <action android:name="udl.eps.reproductormusicapropio.PLAY_SONG" />
-                    <action android:name="udl.eps.reproductormusicapropio.STOP_PLAYBACK"/>
-            </intent-filter>
         </receiver>
     </application>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>
