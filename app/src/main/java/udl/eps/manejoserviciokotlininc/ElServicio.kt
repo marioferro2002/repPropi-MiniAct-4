@@ -25,6 +25,7 @@ class ElServicio : Service() {
         val extras = intent?.extras
         val tipo = extras?.getString("sound_type")
 
+        soundPlayer?.stop()
         when (tipo) {
             "flor" -> {
                 soundPlayer = MediaPlayer.create(this, R.raw.flor)
@@ -39,7 +40,8 @@ class ElServicio : Service() {
                 soundPlayer?.start()
             }
             "ballin" -> {
-                playSong()
+                soundPlayer = MediaPlayer.create(this, R.raw.ballin)
+                soundPlayer?.start()
             }
         }
         return startId
