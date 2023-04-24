@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="udl.eps.manejoserviciokotlininc">
+    package="udl.eps.reproductormusicapropio">
 
     <application
         android:allowBackup="true"
@@ -8,9 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ManejoServicioKotlinInc">
+        android:theme="@style/Theme.reproductormusicapropio">
         <activity
-            android:name=".MainActivity"
+            android:name="udl.eps.reproductormusicapropio.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,16 +19,16 @@
             </intent-filter>
         </activity>
 
-        <service android:enabled="true" android:name=".ElServicio"
+        <service android:enabled="true" android:name="udl.eps.reproductormusicapropio.ElServicio"
             android:exported="false" />
         <receiver
-            android:name=".BroadcastReciever"
+            android:name="udl.eps.reproductormusicapropio.BroadcastReciever"
             android:exported="true">
             <intent-filter>
-                    <action android:name="udl.eps.manejoserviciokotlininc.PLAY_SOUND" />
-                    <action android:name="udl.eps.manejoserviciokotlininc.PLAY_SONG" />
-                    <action android:name="udl.eps.manejoserviciokotlininc.STOP_PLAYBACK" />
-                </intent-filter>
+                    <action android:name="udl.eps.reproductormusicapropio.PLAY_SOUND" />
+                    <action android:name="udl.eps.reproductormusicapropio.PLAY_SONG" />
+                    <action android:name="udl.eps.reproductormusicapropio.STOP_PLAYBACK"/>
+            </intent-filter>
         </receiver>
     </application>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

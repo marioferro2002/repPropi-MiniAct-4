@@ -1,4 +1,4 @@
-package udl.eps.manejoserviciokotlininc
+package udl.eps.reproductormusicapropio
 
 import android.media.MediaPlayer
 import android.net.Uri

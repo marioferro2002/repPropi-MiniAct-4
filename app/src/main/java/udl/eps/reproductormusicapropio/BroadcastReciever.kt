@@ -1,10 +1,9 @@
-package udl.eps.manejoserviciokotlininc
+package udl.eps.reproductormusicapropio
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 
 class BroadcastReciever : BroadcastReceiver() {
     
